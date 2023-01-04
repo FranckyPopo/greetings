@@ -31,9 +31,5 @@ $string['greetinguserfj'] = 'Bula, {$a}.';
 $string['greetingusernz'] = 'Kia Ora, {$a}.';
 $string['greetinguserfr'] = 'Bonjour {$a}'; 
 $string['greetingloggedinuser'] = 'C\'est comment {$a}'; 
+$string["message"] = "Exemple message";
 
-
-if (isloggedin())
-    echo get_string('greetingloggedinuser', 'local_greetings', fullname($USER));
-else
-    echo get_string('greetinguser', 'local_greetings');
