@@ -1,4 +1,5 @@
 <?php
+// defined('MOODLE_INTERNAL') || die();
 require_once('../../config.php');
 require_once($CFG->dirroot. "/local/greetings/message_form.php");
 
@@ -8,23 +9,29 @@ $PAGE->set_url(new moodle_url('/local/greetings/index.php'));
 $PAGE->set_pagelayout('standard');
 $PAGE->set_title($SITE->fullname);
 $PAGE->set_heading("HEllO WORD FRANCK");
-
-$PAGE->navbar->ignore_active();
-$PAGE->navbar->add(
-    get_string('preview'),
-    new moodle_url('/local/greetings/'),
-    navigation_node::TYPE_CUSTOM,
-    null,
-    null,
-    new pix_icon('t/message', '')
-);
+$messages = $DB->get_records("local_greetings_messages");
 
 echo $OUTPUT->header();
-$messageform = new local_greetings_message_form();
-$messageform->display();
 
-if ($data = $messageform->get_data()) {
-    $message =required_param("message", PARAM_TEXT);
-    echo $OUTPUT->heading($message, 1);
+$form = new local_greetings_message_form();
+$form->display();
+
+foreach ($messages as $message) {
+    print("<p>". $message->message . " crée le ". userdate($message->timecreated) ."</p>");
 }
+
+if ($data = $form->get_data()) {
+    $message = required_param("message", PARAM_TEXT);
+    
+    if ($message) {
+        $record = new stdClass();
+        $record->message = $message;
+        $record->timecreated = time();
+        $DB->insert_record("local_greetings_messages", $record);
+    }
+}
+
+
+
 echo $OUTPUT->footer();
+

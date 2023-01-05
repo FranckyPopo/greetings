@@ -1,4 +1,5 @@
 <?php
+defined('MOODLE_INTERNAL') || die();
 
 function local_greetings_extend_navigation_frontpage(navigation_node $frontpage)
 {
