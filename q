@@ -1,0 +1,29 @@
+[33mcommit 26396256e5f287137bb931c27904369949410f11[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Afri Franck <afrifranck2003@gmail.com>
+Date:   Mon Oct 20 15:16:03 2025 +0000
+
+    Ajout du sous-module
+
+[33mcommit 319e0be3e97a4aff37f116e9c78093aa415f55ea[m
+Author: FranckyPoop <afrifranck2003@gmail.com>
+Date:   Thu Jan 5 11:28:48 2023 +0000
+
+    Il est possible d'ajouter et d'afficher des données qui vienne de la base de données
+
+[33mcommit f24f9dc25d6d08470611e09569ad95baab9f6dad[m
+Author: FranckyPoop <afrifranck2003@gmail.com>
+Date:   Wed Jan 4 16:58:53 2023 +0000
+
+    Create form
+
+[33mcommit 8114f96d89244893f6cb467cb7bfb513eee01283[m
+Author: FranckyPoop <afrifranck2003@gmail.com>
+Date:   Mon Jan 2 19:07:55 2023 +0000
+
+    Il posible d'afficher la salution en fonction du profile de l'utilisateur
+
+[33mcommit 5881bf518a6eef14b9a07618e13bfb650b95ad72[m
+Author: FranckyPoop <afrifranck2003@gmail.com>
+Date:   Mon Jan 2 12:08:04 2023 +0000
+
+    First commit
